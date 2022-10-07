@@ -9,3 +9,15 @@ function navLinkScroll() {
     console.log(document.getElementsByTagName("h2")[i]);
   }
 }
+
+function navLinkScrollFirst() {
+  document.getElementsByTagName("h2")[0].scrollIntoView();
+}
+
+function navLinkScrollSecond() {
+  document.getElementsByTagName("h2")[1].scrollIntoView();
+}
+
+function navLinkScrollThird() {
+  document.getElementsByTagName("h2")[2].scrollIntoView();
+}

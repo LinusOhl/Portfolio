@@ -8,6 +8,7 @@ $font-raleway: "Raleway", sans serif;
 // Base CSS
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -92,6 +93,12 @@ header section {
 
 header li {
   display: inline;
+  cursor: pointer;
+}
+
+header li:hover {
+  color: $yellow-color;
+  transition: color 0.3s;
 }
 
 // Hero CSS
@@ -117,6 +124,19 @@ header li {
 .about-content {
   display: grid;
   gap: 2rem;
+}
+
+.s-container {
+  width: 100%;
+  background-color: $gray-color;
+}
+
+.html {
+  padding: 2px;
+  width: 80%;
+  color: $dark-color;
+  background-color: $yellow-color;
+  text-align: end;
 }
 
 // Portfolio CSS
