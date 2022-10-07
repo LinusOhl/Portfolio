@@ -11,6 +11,7 @@ function navLinkScroll() {
 }
 
 function navLinkScrollFirst() {
+  console.log(document.getElementsByTagName("h2")[0].scrollIntoView());
   document.getElementsByTagName("h2")[0].scrollIntoView();
 }
 

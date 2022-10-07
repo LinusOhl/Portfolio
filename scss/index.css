@@ -23,6 +23,10 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  scroll-margin-top: 6rem;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 1rem;
@@ -129,6 +133,7 @@ header li:hover {
 .skills-content {
   color: #1e1e1e;
   background-color: #f3cb15;
+  font-weight: bold;
   text-align: end;
   padding: 2px;
   margin-bottom: 1rem;
