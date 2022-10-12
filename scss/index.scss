@@ -254,8 +254,13 @@ input[type="email"]:focus {
   background-color: black;
 }
 
-.footer-section .section-title {
+.footer-section .section-title,
+.fa-styles {
   margin-bottom: 1.6rem;
+}
+
+.footer-section p {
+  font-size: 0.6rem;
 }
 
 // Media Queries: Mobile
