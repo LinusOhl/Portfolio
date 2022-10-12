@@ -86,6 +86,11 @@ header a:hover {
   border: none;
 }
 
+label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
 header {
   background-color: #2e2e2e;
   position: fixed;
