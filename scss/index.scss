@@ -51,7 +51,7 @@ hr {
   margin: auto;
 }
 
-section {
+.section-margin {
   margin-bottom: 8rem;
 }
 
@@ -93,11 +93,14 @@ header a:hover {
   font-family: $font-raleway;
   font-weight: bold;
   border: none;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
 }
 
 label {
   display: block;
   margin-bottom: 0.6rem;
+  font-weight: bold;
 }
 
 // Header CSS
@@ -109,10 +112,6 @@ header {
   font-family: $font-poppins;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-header section {
-  margin-bottom: 0;
 }
 
 .header-section {
@@ -193,7 +192,9 @@ header li:hover {
 
 .portfolio-container {
   background-color: $gray-color;
+  border-radius: 2px;
   display: flex;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-container p {
@@ -212,7 +213,15 @@ header li:hover {
 
 // Contact CSS
 
-input[type="email"] {
+.contact-container {
+  background-color: $gray-color;
+  border-radius: 2px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+input[type="email"],
+textarea {
   width: 100%;
   padding: 0.6rem;
   font-family: $font-raleway;
@@ -220,31 +229,33 @@ input[type="email"] {
   border: 4px solid $gray-color;
   color: $light-color;
   margin-bottom: 1rem;
-}
-
-input[type="email"]:focus {
-  border: 4px solid $yellow-color;
 }
 
 textarea {
-  width: 100%;
   height: 6rem;
-  padding: 0.6rem;
-  font-family: $font-raleway;
-  background-color: $dark-color;
-  border: 4px solid $gray-color;
-  color: $light-color;
-  margin-bottom: 1rem;
   resize: none;
 }
 
-textarea:focus {
+textarea:focus,
+input[type="email"]:focus {
   border: 4px solid $yellow-color;
+  border-radius: 2px;
+  outline: none;
 }
 
 // Footer CSS
 
 .footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+}
+
+.footer-section .section-title {
+  margin-bottom: 1.6rem;
 }
 
 // Media Queries: Mobile
