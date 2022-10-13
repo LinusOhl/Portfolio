@@ -64,19 +64,6 @@ li {
   padding: 1em 2em;
 }
 
-header a {
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-header a:visited {
-  color: $light-color;
-}
-
-header a:hover {
-  color: $yellow-color;
-}
-
 .fa-brands,
 .fa-solid {
   padding: 1px 0.6em;
@@ -123,12 +110,15 @@ header {
 
 header li {
   display: inline;
+}
+
+.header-menu {
+  transition: color 0.3s;
   cursor: pointer;
 }
 
-header li:hover {
+.header-menu:hover {
   color: $yellow-color;
-  transition: color 0.3s;
 }
 
 // Hero CSS
