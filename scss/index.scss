@@ -5,7 +5,7 @@ $yellow-color: #f3cb15;
 $font-poppins: "Poppins", sans serif;
 $font-raleway: "Raleway", sans serif;
 
-// Base CSS
+// Base CSS --------------------------------------------------------------------------------
 
 * {
   box-sizing: border-box;
@@ -90,7 +90,7 @@ label {
   font-weight: bold;
 }
 
-// Header CSS
+// Header CSS --------------------------------------------------------------------------------
 
 header {
   background-color: $gray-color;
@@ -106,6 +106,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1em 5em;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
 }
 
 header li {
@@ -113,15 +114,16 @@ header li {
 }
 
 .header-menu {
-  transition: color 0.3s;
+  transition: 0.3s;
   cursor: pointer;
+
+  &:hover {
+    color: $yellow-color;
+    transform: translateY(-2px);
+  }
 }
 
-.header-menu:hover {
-  color: $yellow-color;
-}
-
-// Hero CSS
+// Hero CSS --------------------------------------------------------------------------------
 
 .hero-section {
   margin-bottom: 0;
@@ -144,7 +146,7 @@ header li {
   font-size: 1.2em;
 }
 
-// Parallax
+// Parallax --------------------------------------------------------------------------------
 
 .parallax {
   background-image: url("../img/what.png");
@@ -155,7 +157,7 @@ header li {
   background-size: cover;
 }
 
-// About CSS
+// About CSS --------------------------------------------------------------------------------
 
 .about-content {
   display: grid;
@@ -190,12 +192,13 @@ header li {
   background-image: linear-gradient(90deg, #ff8008, #ffc837);
 }
 
-// Portfolio CSS
+// Portfolio CSS --------------------------------------------------------------------------------
 
 .portfolio-main-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 2rem;
+  justify-content: center;
 }
 
 .portfolio-container {
@@ -213,19 +216,24 @@ header li {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 2px 0 0 2px;
 }
 
 .portfolio-content {
   padding: 1rem;
 }
 
-// Contact CSS
+// Contact CSS --------------------------------------------------------------------------------
 
 .contact-container {
   background-color: $gray-color;
   border-radius: 2px;
   padding: 2rem;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+form {
+  display: grid;
 }
 
 input[type="email"],
@@ -237,6 +245,13 @@ textarea {
   border: 4px solid $gray-color;
   color: $light-color;
   margin-bottom: 1rem;
+
+  &:focus {
+    transition: 0.3s;
+    border: 3px solid $yellow-color;
+    border-radius: 2px;
+    outline: none;
+  }
 }
 
 textarea {
@@ -244,14 +259,12 @@ textarea {
   resize: none;
 }
 
-textarea:focus,
-input[type="email"]:focus {
-  border: 4px solid $yellow-color;
-  border-radius: 2px;
-  outline: none;
+input[type="submit"] {
+  cursor: pointer;
+  justify-self: end;
 }
 
-// Footer CSS
+// Footer CSS --------------------------------------------------------------------------------
 
 .footer-section {
   display: flex;
@@ -277,7 +290,7 @@ input[type="email"]:focus {
   font-size: 0.6rem;
 }
 
-// Media Queries: Mobile
+// Media Queries: Mobile -------------------------------------------------------------------------------
 
 @media only screen and (max-width: 767px) {
   header {
@@ -303,7 +316,13 @@ input[type="email"]:focus {
   .portfolio-container {
     flex-direction: column;
   }
+
+  .portfolio-container img {
+    border-radius: 2px 2px 0 0;
+  }
 }
+
+// Media Queries: Tablet -------------------------------------------------------------------------------
 
 @media only screen and (min-width: 767px) {
   section {
@@ -312,5 +331,13 @@ input[type="email"]:focus {
 
   .about-content {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Media Queries: Desktop ------------------------------------------------------------------------------
+
+@media only screen and (min-width: 1024px) {
+  section {
+    padding: 1rem 18rem;
   }
 }
