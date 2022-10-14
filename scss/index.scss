@@ -169,7 +169,6 @@ header li {
 
 .skills-content {
   color: $dark-color;
-  background-color: $yellow-color;
   font-weight: bold;
   text-align: end;
   padding: 2px;
@@ -178,14 +177,17 @@ header li {
 
 .html {
   width: 80%;
+  background-image: linear-gradient(90deg, #e43a15, #e65245);
 }
 
 .css {
   width: 60%;
+  background-image: linear-gradient(90deg, #7474bf, #49a09d);
 }
 
 .js {
   width: 10%;
+  background-image: linear-gradient(90deg, #ff8008, #ffc837);
 }
 
 // Portfolio CSS
